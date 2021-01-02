@@ -11,7 +11,7 @@ This is a big topic. ANNs have a wide variety of applications and can be used fo
 ### The XOR Problem
 The XOr, or “exclusive or”, problem is a classic problem in ANN research. It is the problem of using a neural network to predict the outputs of XOr logic gates given two binary inputs. An XOr function should return a true value if the two inputs are not equal and a false value if they are equal. All possible inputs and predicted outputs are shown in figure 1.
 
-<img scr="https://miro.medium.com/max/300/0*LYlt6CZJHOJkNRHJ.png"/>
+<img scr="https://miro.medium.com/max/300/0*LYlt6CZJHOJkNRHJ.jpeg"/>
 
 XOr is a classification problem and one for which the expected outputs are known in advance. It is therefore appropriate to use a supervised learning approach.
 
@@ -22,7 +22,11 @@ Like all ANNs, the perceptron is composed of a network of units, which are anala
 
 Perceptrons include a single layer of input units — including one bias unit — and a single output unit (see figure 2). Here a bias unit is depicted by a dashed circle, while other units are shown as blue circles. There are two non-bias input units representing the two binary input values for XOr. Any number of input units can be included.
 
-<img scr="https://miro.medium.com/max/445/0*wOYoifz24Wz_I152."/>
+<img scr="https://miro.medium.com/max/445/0*wOYoifz24Wz_I152.jpeg"/>
 
 A simplified explanation of the forward propagation process is that the input values X1 and X2, along with the bias value of 1, are multiplied by their respective weights W0..W2, and parsed to the output unit. The output unit takes the sum of those values and employs an activation function — typically the Heavside step function — to convert the resulting value to a 0 or 1, thus classifying the input values as 0 or 1.
 It is the setting of the weight variables that gives the network’s author control over the process of converting input values to an output value. It is the weights that determine where the classification line, the line that separates data points into classification groups, is drawn. If all data points on one side of a classification line are assigned the class of 0, all others are classified as 1.
+
+
+### Multilayer Perceptrons
+The solution to this problem is to expand beyond the single-layer architecture by adding an additional layer of units without any direct access to the outside world, known as a hidden layer. This kind of architecture — shown in Figure 4 — is another feed-forward network known as a multilayer perceptron (MLP).
